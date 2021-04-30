@@ -1,0 +1,154 @@
+* {
+    cursor: url('gif1.gif'),auto;
+  }
+
+  @font-face {
+    font-family: SKPupok-Solid;
+    src: url('../fonts/SK Pupok-Solid Demo.woff2') format('woff2'),
+         url('../fonts/SKPupok-Solid.woff') format('woff');
+    font-weight: normal;
+}
+
+.phonekey{
+  display: none;
+}
+
+#result{
+  z-index: 2;
+  position:absolute;
+  bottom:3rem;
+  margin:10vw;
+  border: 1px transparent;
+  background:transparent;
+  font-family: SKPupok-Solid;
+  font-size: 2rem;
+  -webkit-text-stroke: 1px rgb(255, 60, 60);
+  color: white;
+}
+
+body{
+    display: flex;
+    justify-content:center ;
+    position: fixed;
+    overflow: hidden;
+    margin: 0;
+  }
+
+  
+
+  .foo{
+      position: absolute;
+
+  }
+ 
+ 
+  .mySlides {
+    display:none;
+    width:100vw;
+    height:100vh;
+  }
+
+  .left{
+    z-index: 3;
+    position: absolute;
+    top:50vh;
+    left:0;
+  }
+
+  .right{
+    z-index: 3;
+    position: absolute;
+    top:50vh;
+    right:0;
+  }
+
+
+#clickme {
+  z-index: 2;
+  position:absolute;
+  top:0;
+  margin: 0;
+  height:100vh;
+  width:100vw;
+  padding: 0px;
+  background: transparent;
+  font-family: SKPupok-Solid;
+  border: 1px solid white;
+  -webkit-text-stroke: 2px lightblue;
+  color: white;
+  font-size: 3rem;
+}
+
+#cleanit{
+  z-index: 2;
+  position:absolute;
+  bottom:0;
+  margin:10vw;
+  border: 1px solid white;
+  background:transparent;
+  font-family: SKPupok-Solid;
+  font-size: 1rem;
+  -webkit-text-stroke: 1px rgb(255, 60, 60);
+  color: white;
+}
+
+.left{
+  font-size: 1rem;
+  padding:1rem;
+}
+
+.right{
+  font-size: 1rem;
+  padding:1rem;
+}
+
+
+@media screen and (max-width:780px){
+  .phonekey{
+    z-index: 3;
+    display: block;
+    position:absolute;
+    top:3rem;
+    left:3rem;
+    font-size: 1rem;
+  }
+  #gif{
+    padding:5px;
+    
+  }
+  #result{
+   display:none;
+  }
+  .foo{
+    width:45vw;
+  }
+ 
+  #clickme{
+     font-size: 2rem;
+     -webkit-text-stroke: 1px lightblue;
+   }
+
+   .left{
+    font-size: 10px;
+    padding:10px;
+  }
+  
+  .right{
+    font-size:10px;
+    padding:10px;
+  }
+ }
+ 
+
+
+@media screen and (min-width:1000px){
+  .foo{
+    width:35vw;
+  }
+
+  
+  #clickme{
+    font-size: 4rem;
+    -webkit-text-stroke: 1px lightblue;
+  }
+}
