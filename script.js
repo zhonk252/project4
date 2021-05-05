@@ -6,6 +6,7 @@ let left = document.querySelector('.left');
 let right = document.querySelector('.right');
 let phonekey = document.querySelector('.phonekey');
 
+
 function addImage(x,y) {
 	var img = document.createElement("img");
 	img.src = `${brush}.gif`;
@@ -54,6 +55,7 @@ function plusDivs(n) {
 }
 
 function showDivs(n) {
+  
   var i;
   var x = document.getElementsByClassName("mySlides");
   if (n > x.length) {slideIndex = 1}
@@ -63,6 +65,16 @@ function showDivs(n) {
   }
   x[slideIndex-1].style.display = "block";  
 }
+
+document.querySelector('.left').addEventListener('click', (event) => {
+  event.stopPropagation();
+  plusDivs(-1);
+});
+
+document.querySelector('.right').addEventListener('click', (event) => {
+  event.stopPropagation();
+  plusDivs(-1)
+});
 
 
 // window.addEventListener('keydown', (event) => {
@@ -123,6 +135,7 @@ document.documentElement.addEventListener('click', (event) => {
 });
 
 
+
 function myfunction1() { 
 	brush='F1'
 } 	
@@ -165,14 +178,17 @@ window.addEventListener('keyup', (event) => {
 	if (event.code === 'Backspace') {
 	  while (document.body.querySelector('.foo')) {
     document.body.querySelector('.foo').remove();
-}
+    }
+    count = 0;
+    button.innerHTML = "You are "  + count + " level of pouen allergy";
 	}
 
-  });
+});
 
 
 
-cleanFlower.addEventListener('click',function(){
+cleanFlower.addEventListener('click',function(event){
+  event.stopPropagation();
 	while (document.body.querySelector('.foo')) {
 		document.body.querySelector('.foo').remove();
 	}
@@ -181,7 +197,7 @@ cleanFlower.addEventListener('click',function(){
 
 var button = document.getElementById("clickme"),
   count = 0;
-button.onclick = function() {
+  button.onclick = function() {
   count += 1;
   button.innerHTML = "You are "  + count + " level of pouen allergy";
 };

@@ -11,7 +11,9 @@
 
 .phonekey{
   display: none;
+  margin:0 2rem;
 }
+
 
 #result{
   z-index: 2;
@@ -22,7 +24,7 @@
   background:transparent;
   font-family: SKPupok-Solid;
   font-size: 2rem;
-  -webkit-text-stroke: 1px rgb(255, 60, 60);
+  -webkit-text-stroke: 1px rgb(255, 161, 60);
   color: white;
 }
 
@@ -53,6 +55,12 @@ body{
     position: absolute;
     top:50vh;
     left:0;
+    border: 1px solid white;
+    background:transparent;
+  font-family: SKPupok-Solid;
+  font-size: 1rem;
+  -webkit-text-stroke: 1px rgb(0, 229, 255);
+  color: white;
   }
 
   .right{
@@ -60,8 +68,15 @@ body{
     position: absolute;
     top:50vh;
     right:0;
+    border: 1px solid white;
+    background:transparent;
+    font-family: SKPupok-Solid;
+    font-size: 1rem;
+    -webkit-text-stroke: 1px rgb(0, 229, 255);
+    color: white;
   }
 
+ 
 
 #clickme {
   z-index: 2;
@@ -88,7 +103,7 @@ body{
   background:transparent;
   font-family: SKPupok-Solid;
   font-size: 1rem;
-  -webkit-text-stroke: 1px rgb(255, 60, 60);
+  -webkit-text-stroke: 1px rgb(255, 60, 161);
   color: white;
 }
 
@@ -102,11 +117,19 @@ body{
   padding:1rem;
 }
 
+.nine{
+  display: grid;
+  grid-template-columns: repeat(3,33.3%);
+  grid-template-rows: repeat(3,33.3%);
+}
+
 
 @media screen and (max-width:780px){
   .phonekey{
     z-index: 3;
-    display: block;
+    display: grid;
+    grid-template-columns: repeat(3,33.3%);
+    grid-template-rows: repeat(3,33.3%);
     position:absolute;
     top:3rem;
     left:3rem;
@@ -114,6 +137,7 @@ body{
   }
   #gif{
     padding:5px;
+    margin:5px;
     
   }
   #result{
@@ -143,7 +167,7 @@ body{
 
 @media screen and (min-width:1000px){
   .foo{
-    width:35vw;
+    width:20vw;
   }
 
   
