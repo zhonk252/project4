@@ -2,11 +2,11 @@
     cursor: url('F1.gif'),auto;
   }
 
-  @font-face {
-    font-family: SKPupok-Solid;
-    src: url('../fonts/SK Pupok-Solid Demo.woff2') format('woff2'),
-         url('../fonts/SKPupok-Solid.woff') format('woff');
-    font-weight: normal;
+@font-face {
+  font-family: SKPupok-Solid;
+  src: url('../fonts/SK Pupok-Solid Demo.woff2') format('woff2'),
+       url('../fonts/SKPupok-Solid.woff') format('woff');
+  font-weight: normal;
 }
 
 
@@ -34,11 +34,11 @@
 }
 
 body{
-    display: flex;
-    justify-content:center ;
-    position: fixed;
-    overflow: hidden;
-    margin: 0;
+  display: flex;
+  justify-content:center ;
+  position: fixed;
+  overflow: hidden;
+  margin: 0;
 }
 
   
@@ -51,37 +51,37 @@ body{
 
  
 .mySlides {
-    display:none;
-    width:100vw;
-    height:100vh;
+  display:none;
+  width:100vw;
+  height:100vh;
 }
 
 .left{
-    z-index: 3;
-    position: absolute;
-    top:50vh;
-    left:0;
-    border: 1px solid white;
-    background:transparent;
-    padding:1rem;
-    font-family: SKPupok-Solid;
-    font-size: 1.5rem;
-    -webkit-text-stroke: 1px rgb(0, 229, 255);
-    color: white;
+  z-index: 3;
+  position: absolute;
+  top:50vh;
+  left:0;
+  border: 1px solid white;
+  background:transparent;
+  padding:1rem;
+  font-family: SKPupok-Solid;
+  font-size: 1.5rem;
+  -webkit-text-stroke: 1px rgb(0, 229, 255);
+  color: white;
 }
 
 .right{
-    z-index: 3;
-    position: absolute;
-    top:50vh;
-    right:0;
-    border: 1px solid white;
-    background:transparent;
-    padding:1rem;
-    font-family: SKPupok-Solid;
-    font-size: 1.5rem;
-    -webkit-text-stroke: 1px rgb(0, 229, 255);
-    color: white;
+  z-index: 3;
+  position: absolute;
+  top:50vh;
+  right:0;
+  border: 1px solid white;
+  background:transparent;
+  padding:1rem;
+  font-family: SKPupok-Solid;
+  font-size: 1.5rem;
+  -webkit-text-stroke: 1px rgb(0, 229, 255);
+  color: white;
 }
 
  
@@ -147,11 +147,11 @@ body{
   }
  
   #clickme{
-     font-size: 2rem;
-     -webkit-text-stroke: 1px lightblue;
+    font-size: 2rem;
+    -webkit-text-stroke: 1px lightblue;
    }
 
-   .left{
+  .left{
     font-size: 10px;
     padding:10px;
   }
