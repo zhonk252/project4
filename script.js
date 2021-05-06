@@ -1,5 +1,4 @@
 let brush = 'F1';
-// let imgs = ['toilet.jpeg','trash.jpeg','4.jpeg','Food.jpeg'];
 let cleanFlower = document.querySelector('#cleanit');
 let result = document.querySelector('#result');
 let left = document.querySelector('.left');
@@ -22,67 +21,60 @@ function addImage(x,y) {
 
 
 
-// var slideIndex = 1;
-// showDivs(slideIndex);
+var slideIndex = 1;
+showDivs(slideIndex);
 
-// function plusDivs(n) {
-//   showDivs(slideIndex += n);
-// }
-
-// function showDivs(n) {
-  
-//   var i;
-//   var x = document.getElementsByClassName("mySlides");
-//   if (n > x.length) {slideIndex = 1}
-//   if (n < 1) {slideIndex = x.length}
-//   for (i = 0; i < x.length; i++) {
-//     x[i].style.display = "none";  
-//   }
-//   x[slideIndex-1].style.display = "block";  
-// }
-
-// document.querySelector('.left').addEventListener('click', (event) => {
-//   event.stopPropagation();
-//   plusDivs(-1);
-// });
-
-
-// document.querySelector('.right').addEventListener('click', (event) => {
-//   event.stopPropagation();
-//   plusDivs(-1)
-// });
-
-
-// window.addEventListener('keydown', (event) => {
-// 	if (event.code === 'ArrowLeft') {
-// 	  left.addEventListener('click',function(){
-// 		push.plusDivs(-1);
-// 	  })
-// 	}
-// 	if (event.code === 'ArrowRight') {
-// 		right.addEventListener('click',function(){
-// 		  push.plusDivs(1)
-// 		})
-// 	  }
-//   });
-
-
-function bgSwitcher() {
-  let currentBg = 0;
-  const bgs = ['toilet.jpeg', 'Food.jpeg', 'trash.jpeg', 'bg4.png'];
-  const swapLeft = () => {
-      currentBg = (currentBg > 0) ? currentBg - 1 : bgs.length - 1;
-      document.body.style.backgroundImage = `url("${bgs[currentBg]}")`;
-  };
-  const swapRight = () => {
-      currentBg = (currentBg < bgs.length - 1) ? currentBg + 1 : 0;
-      document.body.style.backgroundImage = bgs[currentBg];
-  };
-  document.addEventListener('keyup', (event) => {
-      if (event.key === 'ArrowLeft') swapLeft();
-      if (event.key === 'ArrowRight') swapRight();
-  });
+function plusDivs(n) {
+  showDivs(slideIndex += n);
 }
+
+function showDivs(n) {
+  
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+
+document.querySelector('.left').addEventListener('click', (event) => {
+  event.stopPropagation();
+  plusDivs(-1);
+});
+
+
+document.querySelector('.right').addEventListener('click', (event) => {
+  event.stopPropagation();
+  plusDivs(-1)
+});
+
+
+
+  document.addEventListener('keyup', (event) => {
+          if (event.key === 'ArrowLeft') plusDivs(-1);
+          if (event.key === 'ArrowRight') plusDivs(1);
+      });
+
+
+// function bgSwitcher() {
+//   let currentBg = 0;
+//   const bgs = ['toilet.jpeg', 'Food.jpeg', 'trash.jpeg', 'bg4.png'];
+//   const swapLeft = () => {
+//       currentBg = (currentBg > 0) ? currentBg - 1 : bgs.length - 1;
+//       document.body.style.backgroundImage = `url("${bgs[currentBg]}")`;
+//   };
+//   const swapRight = () => {
+//       currentBg = (currentBg < bgs.length - 1) ? currentBg + 1 : 0;
+//       document.body.style.backgroundImage = bgs[currentBg];
+//   };
+//   document.addEventListener('keyup', (event) => {
+//       if (event.key === 'ArrowLeft') swapLeft();
+//       if (event.key === 'ArrowRight') swapRight();
+//   });
+// }
 
 
 

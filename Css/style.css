@@ -1,5 +1,5 @@
 * {
-    cursor: url('gif1.gif'),auto;
+    cursor: url('F1.gif'),auto;
   }
 
   @font-face {
@@ -34,9 +34,6 @@
 }
 
 body{
-  top:0;
-  left:0;
-  background-image: 100vw;
     display: flex;
     justify-content:center ;
     position: fixed;
@@ -53,7 +50,7 @@ body{
  
 
  
-/* .mySlides {
+.mySlides {
     display:none;
     width:100vw;
     height:100vh;
@@ -85,7 +82,7 @@ body{
     font-size: 1.5rem;
     -webkit-text-stroke: 1px rgb(0, 229, 255);
     color: white;
-} */
+}
 
  
 
