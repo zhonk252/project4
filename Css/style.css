@@ -9,11 +9,16 @@
     font-weight: normal;
 }
 
+
 .phonekey{
   display: none;
   margin:0 2rem;
 }
 
+#gif{
+  border: 1px solid white;
+  background:transparent;
+}
 
 #result{
   z-index: 2;
@@ -29,52 +34,58 @@
 }
 
 body{
+  top:0;
+  left:0;
+  background-image: 100vw;
     display: flex;
     justify-content:center ;
     position: fixed;
     overflow: hidden;
     margin: 0;
-  }
+}
 
   
 
-  .foo{
-      position: absolute;
+.foo{
+    position: absolute;
 
-  }
+}
  
+
  
-  .mySlides {
+/* .mySlides {
     display:none;
     width:100vw;
     height:100vh;
-  }
+}
 
-  .left{
+.left{
     z-index: 3;
     position: absolute;
     top:50vh;
     left:0;
     border: 1px solid white;
     background:transparent;
-  font-family: SKPupok-Solid;
-  font-size: 1rem;
-  -webkit-text-stroke: 1px rgb(0, 229, 255);
-  color: white;
-  }
+    padding:1rem;
+    font-family: SKPupok-Solid;
+    font-size: 1.5rem;
+    -webkit-text-stroke: 1px rgb(0, 229, 255);
+    color: white;
+}
 
-  .right{
+.right{
     z-index: 3;
     position: absolute;
     top:50vh;
     right:0;
     border: 1px solid white;
     background:transparent;
+    padding:1rem;
     font-family: SKPupok-Solid;
-    font-size: 1rem;
+    font-size: 1.5rem;
     -webkit-text-stroke: 1px rgb(0, 229, 255);
     color: white;
-  }
+} */
 
  
 
@@ -107,15 +118,6 @@ body{
   color: white;
 }
 
-.left{
-  font-size: 1rem;
-  padding:1rem;
-}
-
-.right{
-  font-size: 1rem;
-  padding:1rem;
-}
 
 .nine{
   display: grid;
@@ -132,7 +134,7 @@ body{
     grid-template-rows: repeat(3,33.3%);
     position:absolute;
     top:3rem;
-    left:3rem;
+    left:1rem;
     font-size: 1rem;
   }
   #gif{

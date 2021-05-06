@@ -20,61 +20,37 @@ function addImage(x,y) {
 }
 
 
-// function changeImage(dir) {
-// 	var img = document.getElementById("imgClickAndChange");
-// 	img.src = imgs[imgs.indexOf(img.src) + (dir || 1)] || imgs[dir ? imgs.length - 1 : 0];
+
+
+// var slideIndex = 1;
+// showDivs(slideIndex);
+
+// function plusDivs(n) {
+//   showDivs(slideIndex += n);
 // }
 
-// document.onkeydown = function(e) {
-// 	e = e || window.event;
-// 	if (e.keyCode == '37') {
-// 		changeImage(-1) //left <- show Prev image
-// 	} 
-	
-// 	if (e.keyCode == '39') {
-// 		// right -> show next image
-// 		changeImage(1)
-// 	}
-// 	if (e.keyCode == '39') {
-// 		// right -> show next image
-// 		changeImage(2)
-// 	}	
-// 	if (e.keyCode == '39') {
-// 		// right -> show next image
-// 		changeImage()
-// 	}	
-// }
-
-
-
-var slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-
-function showDivs(n) {
+// function showDivs(n) {
   
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  x[slideIndex-1].style.display = "block";  
-}
+//   var i;
+//   var x = document.getElementsByClassName("mySlides");
+//   if (n > x.length) {slideIndex = 1}
+//   if (n < 1) {slideIndex = x.length}
+//   for (i = 0; i < x.length; i++) {
+//     x[i].style.display = "none";  
+//   }
+//   x[slideIndex-1].style.display = "block";  
+// }
 
-document.querySelector('.left').addEventListener('click', (event) => {
-  event.stopPropagation();
-  plusDivs(-1);
-});
+// document.querySelector('.left').addEventListener('click', (event) => {
+//   event.stopPropagation();
+//   plusDivs(-1);
+// });
 
-document.querySelector('.right').addEventListener('click', (event) => {
-  event.stopPropagation();
-  plusDivs(-1)
-});
+
+// document.querySelector('.right').addEventListener('click', (event) => {
+//   event.stopPropagation();
+//   plusDivs(-1)
+// });
 
 
 // window.addEventListener('keydown', (event) => {
@@ -89,6 +65,24 @@ document.querySelector('.right').addEventListener('click', (event) => {
 // 		})
 // 	  }
 //   });
+
+
+function bgSwitcher() {
+  let currentBg = 0;
+  const bgs = ['toilet.jpeg', 'Food.jpeg', 'trash.jpeg', 'bg4.png'];
+  const swapLeft = () => {
+      currentBg = (currentBg > 0) ? currentBg - 1 : bgs.length - 1;
+      document.body.style.backgroundImage = `url("${bgs[currentBg]}")`;
+  };
+  const swapRight = () => {
+      currentBg = (currentBg < bgs.length - 1) ? currentBg + 1 : 0;
+      document.body.style.backgroundImage = bgs[currentBg];
+  };
+  document.addEventListener('keyup', (event) => {
+      if (event.key === 'ArrowLeft') swapLeft();
+      if (event.key === 'ArrowRight') swapRight();
+  });
+}
 
 
 
@@ -180,7 +174,7 @@ window.addEventListener('keyup', (event) => {
     document.body.querySelector('.foo').remove();
     }
     count = 0;
-    button.innerHTML = "You are "  + count + " level of pouen allergy";
+    button.innerHTML = "You are "  + count + " level of pollen allergy";
 	}
 
 });
@@ -199,7 +193,7 @@ var button = document.getElementById("clickme"),
   count = 0;
   button.onclick = function() {
   count += 1;
-  button.innerHTML = "You are "  + count + " level of pouen allergy";
+  button.innerHTML = "You are "  + count + " level of pollen allergy";
 };
 
 
