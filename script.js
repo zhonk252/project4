@@ -1,8 +1,6 @@
 let brush = 'F1';
 let cleanFlower = document.querySelector('#cleanit');
 let result = document.querySelector('#result');
-let left = document.querySelector('.left');
-let right = document.querySelector('.right');
 let phonekey = document.querySelector('.phonekey');
 
 
