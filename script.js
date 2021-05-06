@@ -11,24 +11,30 @@ window.addEventListener('keyup', (event) => {
 	if (Number(event.key) >= 1 && Number(event.key) <= 9) {
 		brush = `F${event.key}`;
 	}
-	result.textContent = `You just pressed: ${event.key}`;
-});
-
-document.documentElement.addEventListener('click', (event) => {
-	addImage(event.pageX, event.pageY);
-	changeCount(count + 1);
-});
-
-window.addEventListener('keyup', (event) => {
-	if (event.code === 'Backspace') {
+	if (event.key === 'Backspace') {
 		while (document.body.querySelector('.foo')) {
 			document.body.querySelector('.foo').remove();
 		}
 		changeCount(0);
 	}
+	result.textContent = `You just pressed: ${event.key}`;
 });
 
-cleanFlower.addEventListener('click', function(event) {
+document.documentElement.addEventListener('click', (event) => {
+	addImage(event.clientX, event.clientY);
+	changeCount(count + 1);
+});
+
+phonekey.querySelectorAll('button').forEach((button) => {
+	button.addEventListener('click', (event) => {
+		event.stopPropagation();
+		const allButtons = [...event.currentTarget.parentNode.querySelectorAll('button')];
+		const index = allButtons.findIndex((i) => i === event.currentTarget);
+		brush = `F${index + 1}`;
+	});
+});
+
+cleanFlower.addEventListener('click', (event) => {
 	event.stopPropagation();
 	while (document.body.querySelector('.foo')) {
 		document.body.querySelector('.foo').remove();
@@ -69,11 +75,10 @@ function addImage(x, y) {
 	var img = document.createElement("img");
 	img.src = `${brush}.gif`;
 	const appendImg = () => {
+		img.className = 'foo';
 		document.body.appendChild(img);
-		img.style.left = `${x - img.offsetWidth / 2}px`
-		img.style.top = `${y - img.offsetHeight / 2}px`
-		var class_name = "foo";
-		img.setAttribute("class", class_name);
+		img.style.left = `${x - img.offsetWidth / 2}px`;
+		img.style.top = `${y - img.offsetHeight / 2}px`;
 	};
 	if ('decoding' in img) {
 		img.decode().then(appendImg);

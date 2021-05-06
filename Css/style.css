@@ -41,7 +41,7 @@ body {
 	margin: 0 2rem;
 }
 
-#gif {
+.phonekey button {
 	border: 1px solid white;
 	background: transparent;
 }
@@ -61,6 +61,7 @@ body {
 
 .foo {
 	position: absolute;
+	pointer-events: none;
 }
 
 .mySlides {
@@ -137,7 +138,7 @@ body {
 		font-size: 1rem;
 	}
 
-	#gif {
+	.phonekey button {
 		padding: 5px;
 		margin: 5px;
 	}
